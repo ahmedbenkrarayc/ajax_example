@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Data CRUD</title>
+</head>
+<body>
+
+<h2>Person Data CRUD Operations</h2>
+
+<div id="result"></div>
+
+<h3>GET All People</h3>
+<button onclick="getPeople()">Fetch All People</button>
+
+<h3>POST New Person</h3>
+<form id="postForm" onsubmit="postPerson(event)">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <button type="submit">Add Person</button>
+</form>
+
+<h3>PUT Update Person</h3>
+<form id="putForm" onsubmit="putPerson(event)">
+    <input type="number" id="updateId" placeholder="Person ID" required>
+    <input type="text" id="updateName" placeholder="Updated Name">
+    <input type="text" id="updateAge" placeholder="Updated Age">
+    <button type="submit">Update Person</button>
+</form>
+
+<h3>DELETE Person</h3>
+<form id="deleteForm" onsubmit="deletePerson(event)">
+    <input type="number" id="deleteId" placeholder="Person ID" required>
+    <button type="submit">Delete Person</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
